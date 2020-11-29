@@ -36,6 +36,9 @@
                     <li>
                         <a href="" class="p-3"> Logout </a>
                     </li>
+                    <li>
+                        <a href="{{ route('register') }}"  class="p-3"> Register </a>
+                    </li>
                 </ul>
             </nav>
         @yield('content')

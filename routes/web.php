@@ -13,8 +13,8 @@ use App\Http\Controllers\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/register', [RegisterController::class, 'index']);
-
+Route::get('/register', [RegisterController::class, 'index'])-> name('register');
+Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/pages', function () {
     return view('pages.welcome');
 });
