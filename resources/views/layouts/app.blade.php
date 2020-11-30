@@ -12,7 +12,7 @@
             <nav class="p-6 bg-white flex justify-between mb-6">
                 <ul class="flex items-center">
                     <li>
-                        <a href="" class="p-3"> Forside </a>
+                        <a href="/welcome" class="p-3"> Forside </a>
                     </li>
 
                     <li>
@@ -27,7 +27,7 @@
                 <ul class="flex items-center">
                     @auth
                         <li>
-                            <a href="" class="p-3"> Jonas Nielsen </a>
+                            <a href="" class="p-3"> {{ auth()->user()->name }}</a>
                         </li>
                         
                         <li>
