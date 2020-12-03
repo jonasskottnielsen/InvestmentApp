@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<div class="flex justify-center">
+
+<div class="flex justify-center flex-grow">
         <div class="w-8/12 bg-white p-6 rounded-lg">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">
