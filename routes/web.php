@@ -22,3 +22,9 @@ Route::get('/welcome', [PageController::class, 'index'])-> name('welcome');
 Route::get('/pages', function () {
     return view('pages.welcome');
 });
+Route::get('/p2p', function () {
+    return view('pages.p2p');
+});
+Route::get('/aktiebeholdning', function () {
+    return view('pages.aktiebeholdning');
+});

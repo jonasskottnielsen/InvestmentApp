@@ -16,11 +16,11 @@
                     </li>
 
                     <li>
-                        <a href="" class="p-3"> P2P-lending </a>
+                        <a href="/p2p" class="p-3"> P2P-lending </a>
                     </li>
 
                     <li>
-                        <a href="" class="p-3"> Aktiebeholdning </a>
+                        <a href="/aktiebeholdning" class="p-3"> Aktiebeholdning </a>
                     </li>
                 </ul>
 
@@ -48,5 +48,4 @@
             </nav>
         @yield('content')
     </body>
-
 </html>
