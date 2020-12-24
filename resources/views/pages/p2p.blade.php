@@ -9,16 +9,16 @@
             google.charts.setOnLoadCallback(drawChart);
             function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work',     11],
-                ['Eat',      2],
-                ['Commute',  2],
-                ['Watch TV', 2],
-                ['Sleep',    7]
+                ['Task', 'P2P-Lending'],
+                ['Mintos',     45000],
+                ['Lenndy',      1000],
+                ['Trine',  750],
+                ['Lendahand', 700],
+                ['Bondora',    15000]
                 ]);
 
                 var options = {
-                title: 'My Daily Activities',
+                title: 'P2P-Lending',
                 pieHole: 0.4,
                 };
 
@@ -26,7 +26,7 @@
                 chart.draw(data, options);
             }
             </script>
-            <div id="donutchart" style="width: 900px; height: 500px;"></div>
+            <div id="donutchart" style="width: 600px; height: 500px;"></div>
         </div>
     </div>
 @endsection
