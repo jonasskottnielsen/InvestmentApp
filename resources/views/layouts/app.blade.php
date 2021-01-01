@@ -5,69 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title> InvestmentApp </title>
-
+        
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
-    <body class="flex flex-col h-screen justify-between bg-gray-300">
-            <nav class="p-6 bg-white mb-6">
-                <p id="hamburgerbtn" class="md:hidden">
-                    Menu
-                </p>
-                <ul class="hidden md:flex md:flex-row" id="mobileMenu">
-                
-                    <li>
-                        <a href="/welcome" class="p-3"> Forside </a>
-                    </li>
-        
-                    <li>
-                        <a href="/p2p" class="p-3"> P2P-lending </a>
-                    </li>
+ <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/welcome">Investering</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                    <li>
-                        <a href="/aktiebeholdning" class="p-3"> Aktiebeholdning </a>
-                    </li>
-                    @auth
-                        <li>
-                            <a href="" class="p-3"> {{ auth()->user()->name }}</a>
-                        </li>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item active">
+          <a class="nav-link" aria-current="page" href="/p2p">Crowlending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
-                        <li>
-                            <form action="{{ route('logout') }}" method="post" class="p-3 inline">
-                            @csrf 
-                            <button type="submit"> Logout </button>
-                        </li>
-                    @endauth
-                    @guest
-                        <li>
-                            <a href="{{ route('login') }}" class="p-3"> Login </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('register') }}"  class="p-3"> Register </a>
-                        </li>
-                    @endguest
-                </ul>
-            </nav>
-        @yield('content')
-        <footer class="h-10 bg-white mt-8">Footer</footer>
-    </body>
+<main class="container">
+@yield('content')
+
+</main><!-- /.container -->
 
 
-    <style>
-        .active{
-            display: block;
-        }    
-    </style>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-<script>
-    let hamburger = document.getElementById('hamburgerbtn');
-
-    let mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', function(){
-        mobileMenu.classList.toggle('active');
-    });
-</script>
+      
+  </body>
 
 
 </html>
