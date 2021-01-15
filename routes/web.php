@@ -28,3 +28,7 @@ Route::get('/p2p', function () {
 Route::get('/aktiebeholdning', function () {
     return view('pages.aktiebeholdning');
 });
+Route::get('/', function () {
+    return view('pages.welcome');
+});
+Route::get('/api/cvr/{cvr}', [ApiController::class,'lookup_cvr']);
